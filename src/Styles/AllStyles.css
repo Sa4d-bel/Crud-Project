@@ -1,0 +1,456 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Parkinsas;
+}
+label{
+    display: block;
+}
+:root{
+    --PrincipalColor : #1B1E25;
+    --SecondColor : #2C2C2C;
+    --buttonsColor : #4CAF50;
+    --inputsBackground : #1E1E1E;
+}
+@font-face {
+    font-family: Parkinsas;
+    src: url('../../public/fonts/Parkinsas/Parkinsans-VariableFont_wght.ttf');
+}
+.App{
+    background-color: var(--PrincipalColor);
+    height: 100vh;
+}
+.Container{
+    width: 100%;
+    height: 94%;
+    padding: 15px;
+    display: flex;
+    justify-content: space-around;
+}
+.projectTitle{
+    font-size: 25px;
+    letter-spacing: 4px;
+    color: white;
+}
+/*form*/
+.myForm{
+    width : 40% ;
+    height : 100%;
+    background-color: var(--SecondColor);
+    padding: 15px;
+    border-radius: 15px;
+    border:  1px solid gray;
+    position: relative;
+}
+.myForm input ,.status select{
+    width: 100%;
+    height: 38px;
+    color: white;
+    padding: 6px 10px;
+    margin-top: 8px;
+    border: 1px solid white;
+    border-radius: 10px;
+    background-color: var(--inputsBackground);
+}
+.status select{
+    cursor: pointer;
+}
+.myForm label{
+    color: white;
+    letter-spacing: 2px;
+    font-size: 14px;
+    margin-left: 5px;
+}
+.formTitle label{
+    font-size: 17px;
+    color: white;
+    letter-spacing: 2px;
+}
+.fullname{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+.fullname div{
+    width: 49%;
+}
+.familyStatus{
+    flex-direction: column;
+    align-items: center;
+}
+.familyStatus select{
+    width: 50%;
+    margin-top: 10px;
+    border-radius: 10px;
+    height: 38px;
+    background-color: var(--inputsBackground);
+    color: white;
+    padding: 5px 10px;
+    cursor: pointer;
+    border: 1px solid white;
+}
+
+.addCostumer ,.homePage button{
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.addCostumer button,.homePage button{
+    width: 30%;
+    height: 70%;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    background-color: var(--buttonsColor);
+    cursor: pointer;
+    transition: 0.3s;
+}
+.addCostumer button:hover,.homePage button:hover{
+    background-color: green;
+}
+.editer{
+    color: var(--inputsBackground);
+    margin-top: 17px;
+}
+.editer span{
+    color: var(--buttonsColor);
+    margin-left: 5px;
+}
+.CostumersData{
+    width: 57%;
+    background-color: var(--SecondColor);
+    border-radius: 15px;
+    border: 1px solid  gray;
+    overflow: hidden;
+    padding: 10px;
+    position: relative;
+}
+/*Search*/
+.searchBox{
+    display: flex;
+    justify-content: center;
+    padding: 4px;
+    height: 7%;
+}
+.search{
+    width: 50%;
+    display: flex;
+    align-items: center;
+    border-radius: 15px;
+    overflow: hidden;
+     border: 2px solid gray;
+}
+.search input{
+    width: 90%;
+    height: 35px;
+    padding: 4px 10px;
+    border: none;
+    outline: none;
+    background-color: var(--inputsBackground);
+    color: white;
+}
+.search div{
+    width: 10%;
+    display: flex;
+    border-radius:  0 15px 15px  0;
+    align-items: center;
+    justify-content: center;
+    height: 35px;
+    background-color: var(--inputsBackground);
+}
+.searchIcon{
+    color: gray;  
+}
+.allCostumers{
+    height: 92%;
+    overflow-y: scroll;
+    border-radius: 15px;
+}
+.allCostumers::-webkit-scrollbar{
+    display: none;
+}
+.costumersDetails{
+    display: flex;
+    justify-content: center;
+    color: white;
+    padding: 5px;
+    margin-top: 5px;
+}
+.costumersDetails label{
+    font-size: 17px;
+    letter-spacing: 2px;
+}
+/*showData*/
+table{
+    width: 100%;
+    margin-top: 10px;
+    border-radius: 15px;
+    overflow: hidden;
+    min-width: 600px; 
+    text-align: center;
+}
+table, th, td {
+  border-collapse: collapse; 
+  color: white;
+  padding: 7px 15px;
+}
+th{
+    font-size: 15px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+table td{
+    font-size: 14px;
+}
+ tr:nth-child(even) {
+      background-color: var(--inputsBackground);
+ }
+tr:nth-child(odd) {
+      background-color: var(--PrincipalColor); 
+}
+.actions{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.actions button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50% 0 50% 0;
+    border: none;
+    padding: 3px;
+    cursor: pointer;
+    color: var(--inputsBackground);
+    transition: 0.3s;
+    background-color: transparent;
+}
+.actions button:first-child{
+    border: 1px solid rgb(223, 86, 227);
+    color: rgb(223, 86, 227);
+}
+.actions button:nth-child(2){
+    border: 1px solid red;
+    color: red;
+}
+.actions button:last-child{
+    border: 1px solid gray;
+    color: gray;
+}
+.actions button:first-child:hover{
+    background-color: rgb(223, 86, 227);
+    color: white;
+}
+.actions button:last-child:hover{
+    background-color: gray;
+    color: white;
+}
+.actions button:nth-child(2):hover{
+    background-color: red;
+    color: white;
+}
+th{
+    background-color: var(--inputsBackground);
+    padding: 10px 0;
+}
+/*DeleteConfirmation*/
+.DeleteConfirmation{
+    background-color: rgb(1, 1, 19);
+    width: 55%;
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 122;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: 0.4s;
+    border: 1px solid gray;
+}
+.clearIcon{
+    color: red;
+    border: 2px solid red;
+    height: 80px !important;
+    width: 80px !important;
+    border-radius: 100%;
+    padding: 10px;
+    margin-bottom: 25px;
+}
+.DeleteConfirmation p{
+    font-size: 17px;
+    color: white;
+}
+.DeleteConfirmation div{
+    width: 60%;
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-around;
+}
+.DeleteConfirmation button{
+    width: 40%;
+    height: 35px;
+    letter-spacing: 2px;
+    border-radius: 5px;
+    border: none;
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.DeleteConfirmation button:first-child{
+    background-color: red;
+}
+.DeleteConfirmation button:last-child{
+    background-color: gray;
+}
+.DeleteConfirmation button:first-child:hover{
+    background-color: rgb(137, 18, 18);
+}
+.DeleteConfirmation button:last-child:hover{
+    background-color: rgb(71, 71, 71);
+}
+/*Details*/
+.Details{
+    position: absolute;
+    inset: 0;
+    background-color: red;
+    border-radius: 15px;
+    background-color: var(--SecondColor);
+    padding: 15px;
+    text-align: center;
+    transition: 0.1s;
+}
+.Details label{
+    letter-spacing: 2px;
+    font-size: 17px;
+}
+.informations{
+    display: flex;
+    margin-top: 15px;
+    padding-left: 20px;
+    color: white;
+    padding: 5px 15px;
+}
+.informations span{
+    margin-left: 25px;
+    font-weight: bold;
+}
+.homePage{
+    display: flex;
+    align-items: center;
+    height: 45px;
+    justify-content: center;
+}
+.homePage button{
+    width: 50%;
+    letter-spacing: 2px;
+    transition: 0s;
+}
+
+
+/*responsive*/
+@media only screen and (max-width: 767px){
+  table, thead, tbody, th, td, tr {
+    display: block;
+    width: 100%;
+  }
+.Container{
+    flex-direction: column;
+}
+.myForm,.CostumersData{
+    width: 100%;
+}
+  thead {
+    display: none; /* نخفي العناوين */
+  }
+
+  tr {
+    margin-bottom: 15px;
+    border: 1px solid gray;
+    border-radius: 10px;
+    padding: 10px;
+    background: var(--PrincipalColor);
+  }
+
+  td {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px;
+    border: none;
+    border-bottom: 1px solid #333;
+    font-size: 14px;
+  }
+
+  td:last-child {
+    border-bottom: none;
+  }
+
+  td::before {
+    content: attr(data-label); /* نعرض اسم العمود */
+    font-weight: bold;
+    text-transform: capitalize;
+  }
+}
+/*confirmationMessage*/
+.confirmationMessage{
+    position: fixed;
+    right: 50px;
+    bottom: 40px;
+    color: white;
+    background-color: var(--buttonsColor);
+    text-align: center;
+    border-radius: 15px;
+    padding: 15px 8px;
+    width: 250px;
+    display: flex;
+    align-items: center;
+    opacity: 0;
+    gap: 15px;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+    pointer-events: none;
+}
+.confirmationMessage {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+  pointer-events: none;
+}
+
+.confirmationMessage.show {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.confirmationMessage.hide {
+  opacity: 0;
+  transform: translateY(30px);
+  pointer-events: none;
+}
+.messageIcon{
+  background-color: rgb(194, 236, 194);
+    border:none;
+    width: 70px !important;
+    height: 70px !important;
+    border-radius: 100%;
+    color: var(--buttonsColor);
+    padding: 10px !important;
+    transition: 0.7s;
+}
+.confirmationMessage div{
+    text-align: left;
+    transition: 0.7s;
+}
+.confirmationMessage label{
+    letter-spacing: 1px; 
+}
