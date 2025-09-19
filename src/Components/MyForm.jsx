@@ -106,7 +106,7 @@ export default function MyForm() {
             marginBottom: "25px",
           }}
         >
-          <label>Customer informations </label>
+          <label>Customer informations test git </label>
         </div>
         <div className="fullname">
           <div className="firstname">
